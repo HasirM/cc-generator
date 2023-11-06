@@ -53,12 +53,22 @@ body {
     
 }
 
+img.profilepic {
+    width: auto;
+    height: 70px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .certificate-container {
     display: flex;
     padding: 20px;
     justify-content: center;
-    width: 842px;
-    height: 595px;
+    height: 842px;
+    width: 595px;
     font-size: 13px !important;
     line-height: 1.6;
 }
@@ -105,7 +115,8 @@ body {
 }
 
 img.logo {
-    width: 50%;
+    width: 60%;
+    height: auto;
 }
 
 .certificate-header{
