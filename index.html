@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>College Certificate</title>
+    <title>Conduct/Course Certificate</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css.map">
@@ -187,8 +187,8 @@
             const opt = {
                 margin: 1,
                 filename: `CC_${registrationNumber}_${name}.pdf`,
-                image: { type: 'jpeg', quality: 500 },
-                html2canvas: { scale: 5 },
+                image: { type: 'jpeg', quality: 1000 },
+                html2canvas: { scale: 10 },
                 jsPDF: { unit: 'pt', format: [width, height], orientation: 'l' }
             };
             html2pdf().set(opt).from(element).save();
