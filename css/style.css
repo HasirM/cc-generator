@@ -102,14 +102,14 @@ body {
     padding: 20px;
     justify-content: center;
     width: 1000px;
-    height: 800px;
+    /* height: 800px; */
     font-size: 14px !important;
 }
 .certificate {
     border: 7px solid #0C5280;
     padding: 35px 0;
     position: relative;
-    width: 80%;
+    /* width: 80%; */
     /* height: 80%; */
 }
 
@@ -124,7 +124,7 @@ body {
     bottom: 0px;
     right: 0px;
     position: absolute;
-    background-image: url(shanmugha-logo.png);
+    background-image: url("../assets/shanmugha-logo.png");
     background-size: 30%;
     background-repeat: no-repeat;
     background-position: center;
@@ -139,7 +139,7 @@ body {
     bottom: 0px;
     right: 0px;
     position: absolute;
-    background-image: url(college-of-engineering-and-technology.png);
+    background-image: url("../assets/college-of-engineering-and-technology.png");
     background-size: 30%;
     background-repeat: repeat;
     opacity: 0.1;

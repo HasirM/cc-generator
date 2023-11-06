@@ -34,26 +34,6 @@
                     </div>
                     <div class="invalid-feedback" data-sb-feedback="gender:required">One option is required.</div>
                 </div>
-                <!-- <div class="form-floating mb-3">
-                    <select class="form-select" id="degree" onchange="updatePreview('degree')" aria-label="Degree" >
-                        <option value="Select">Select</option>
-                        <option value="B.E">B.E</option>
-                        <option value="B.Tech">B.Tech</option>
-                        <option value="M.E">M.E</option>
-                        <option value="M.Tech">M.Tech</option>
-                    </select>
-                    <label for="degree">Degree</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <select class="form-select" id="branch" onchange="updatePreview('branch')" aria-label="Branch">
-                        <option value="1"></option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <label for="branch">Branch</label>
-                </div> -->
                 <div class="form-floating mb-3">
                     <select class="form-select" id="degree" onchange="updateBranchOptions()" aria-label="Degree">
                         <option value="Select">Select</option>
@@ -109,7 +89,7 @@
             <div class="certificate">
                 <div class="water-mark-overlay"></div>
                 <div class="certificate-header">
-                    <img src="shanmugha-full-logo.png" class="logo" alt="">
+                    <img src="assets/shanmugha-full-logo.png" class="logo" alt="">
                     <p class="certificate-title"><strong>CONDUCT / COURSE COMPLETION CERTIFICATE</strong></p>
                 </div>
                 <div class="certificate-body">
@@ -169,11 +149,11 @@
                 branchSelect.options.remove(0);
             }
             if (degree === 'B.E') {
-                addOptions(branchSelect, ['Computer Science and Engineering', 'Biomedical Engineering','Electronics and Communication Engineering', 'Mechanical Engineering']);
+                addOptions(branchSelect, ['Select','Computer Science and Engineering', 'Biomedical Engineering','Electronics and Communication Engineering', 'Mechanical Engineering']);
             } else if (degree === 'B.Tech') {
-                addOptions(branchSelect, ['Artificial Intelligence and Data Science', 'Agriculture Engineering', 'Information Technology']);
+                addOptions(branchSelect, ['Select','Artificial Intelligence and Data Science', 'Agriculture Engineering', 'Information Technology']);
             } else if (degree === 'M.E') {
-                addOptions(branchSelect, ['Computer Science and Engineering']);
+                addOptions(branchSelect, ['Select','Computer Science and Engineering']);
             } 
         }
 
@@ -197,18 +177,24 @@
         }
 
         function generatePDF() {
-            
             const element = document.getElementById('certificate-final');
+            const registrationNumber = document.getElementById('registrationNumber').value;
+            const name = document.getElementById('fullname').value;
+
+            const width = element.offsetWidth*(72/96);
+            const height = element.offsetHeight*(72/96)+3;
 
             const opt = {
-                margin: 0.5,
-                filename: 'certificate.pdf',
+                margin: 1,
+                filename: `CC_${registrationNumber}_${name}.pdf`,
                 image: { type: 'jpeg', quality: 500 },
                 html2canvas: { scale: 5 },
-                jsPDF: { unit: 'in', format: 'letter', orientation: 'landscape' }
+                jsPDF: { unit: 'pt', format: [width, height], orientation: 'l' }
             };
             html2pdf().set(opt).from(element).save();
         }
+
+
     </script>
 </body>
 </html>
