@@ -26,7 +26,7 @@ body {
 }
 
 .download-btn {
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .download-btn button {
@@ -53,6 +53,16 @@ body {
     
 }
 
+img.profilepic {
+    width: auto;
+    height: 60px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .certificate-container {
     display: flex;
     padding: 20px;
@@ -62,12 +72,32 @@ body {
     font-size: 13px !important;
     line-height: 1.6;
 }
+
+.tc-container {
+    height: 695px;
+    width: 494px;
+    font-size: 8px !important;
+    line-height: 1;
+}
+
+input#image {
+    padding: 40px;
+}
+
 .certificate {
     border: 7px solid #0C5280;
-    padding: 30px 0;
+    padding: 25px 0 30px 0;
     position: relative;
-    /* width: 80%; */
-    /* height: 80%; */
+}
+
+.transfer-certificate{
+    padding: 20px 0;
+}
+
+.mini-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 45px;
 }
 
 .strong{
@@ -89,6 +119,10 @@ body {
     z-index: -1;
 }
 
+.tc-overlay{
+    background-size: 50%;
+}
+
 .certificate:after {
     content: '';
     top: 0px;
@@ -105,7 +139,7 @@ body {
 }
 
 img.logo {
-    width: 50%;
+    width: 60%;
 }
 
 .certificate-header{
@@ -117,10 +151,14 @@ img.logo {
     text-align: center;
     border: 2px #0C5280 solid;
     width: fit-content;
-    padding: 7px 26px;
+    padding: 5px 20px;
     border-radius: 20px;
-    margin: 25px 0 25px 0;
+    margin: 15px 0;
 }
+
+/* .tc-title{
+    margin: 15px 0;
+} */
 
 .certificate-content {
     margin: 10px auto 0 auto;
@@ -137,11 +175,35 @@ img.logo {
     text-align: center;
 }
 
+
+/* .tc-content{
+    display: flex;
+    flex-direction: column;
+} */
+
+.element{
+  display: flex;
+  flex-direction: row;
+}
+
+.topic-title{
+    flex: 1;
+}
+
+.second-element{
+    margin-left: 15px;
+    text-transform:uppercase;
+}
+
 .footer {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+.tc-footer{
+    margin-top: 20px;
 }
 
 
