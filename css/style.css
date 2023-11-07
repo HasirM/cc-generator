@@ -1,19 +1,47 @@
-/* Add your CSS styles here */
-/* Add your CSS styles here */
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+
 body {
     display: flex;
-    font-family: Arial, sans-serif;
     margin: 0;
+    background-color: #F9FAFE !important;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #8888884d;
+    opacity: 0.1;
+    border-radius: 20px;
+}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #86868686; 
+  }
 
 #left {
     flex: 1;
-    flex-basis: 33%;
+    flex-basis: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #f2f2f2;
+    background-color: #fff;
+    font-family: Poppins, sans-serif !important;
+    box-shadow: 0 5px 25px -5px rgba(30,16,84,.1);
 }
 
 .form-left {
@@ -23,6 +51,11 @@ body {
     overflow: scroll;
     display: grid;
     justify-items: center;
+
+}
+
+.form-floating label{
+    opacity: 0.5 !important; 
 }
 
 .download-btn {
@@ -31,10 +64,10 @@ body {
 
 .download-btn button {
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #000000;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 1rem;
     cursor: pointer;
 }
 
@@ -44,6 +77,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url(../assets/annie-spratt-xTaOPMa6wAE-unsplash.jpg);
+    z-index: 1;
+    background-size: cover;
 }
 
 /* certficate */
@@ -65,18 +101,20 @@ img.profilepic {
 
 .certificate-container {
     display: flex;
-    padding: 20px;
+    padding: 10px;
     justify-content: center;
     width: 842px;
     height: 595px;
     font-size: 13px !important;
     line-height: 1.6;
+    letter-spacing: 0.5px;
+    font-weight:500;
 }
 
 .tc-container {
     height: 695px;
     width: 494px;
-    font-size: 8px !important;
+    font-size: 9px !important;
     line-height: 1;
 }
 
@@ -84,14 +122,8 @@ input#image {
     padding: 40px;
 }
 
-.certificate {
-    border: 7px solid #0C5280;
-    padding: 25px 0 30px 0;
-    position: relative;
-}
-
 .transfer-certificate{
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 .mini-header {
@@ -119,8 +151,35 @@ input#image {
     z-index: -1;
 }
 
+svg {
+    fill: currentColor;
+    height: auto;
+    max-width: 70vmin;
+    transform-origin: center;
+    width: 8%;
+    position: absolute;
+    bottom: 150px;
+    right: 100px;
+  }
+
+  
+  .footer-note {
+    text-align: center;
+    font-size: 6px;
+    opacity: 0.8;
+}
+
 .tc-overlay{
     background-size: 50%;
+}
+
+
+.certificate {
+    border: 4px solid #0C5280;
+    padding: 15px 0;
+    position: relative;
+    background-color: white;
+    z-index: -2;
 }
 
 .certificate:after {
@@ -207,7 +266,54 @@ img.logo {
 }
 
 
+.container {
+    width: 100%;
+}
 
+.card {
+    width: 250px;
+    height: 250px;
+    background-color: #2f3335;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0, -0.98, 0.82, 2.26);
+}
+
+
+.card:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    border: 5px solid #2f3335;
+    color: #2f3335;
+    transition: 0.5s cubic-bezier(0, -0.98, 0.82, 2.26);
+}
+
+.college-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.college-logo img {
+    height: 100px;
+    margin-top: 25px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15% 0;
+    width: 100%;
+    text-align: center;
+}
 
 
 
