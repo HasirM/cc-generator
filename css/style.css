@@ -7,7 +7,7 @@
 body {
     display: flex;
     margin: 0;
-    background-color: #F9FAFE !important;
+    background-color: #fff !important;
 }
 
 /* width */
@@ -77,9 +77,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(../assets/annie-spratt-xTaOPMa6wAE-unsplash.jpg);
+    /* background: url(../assets/annie-spratt-xTaOPMa6wAE-unsplash.jpg);
     z-index: 1;
-    background-size: cover;
+    background-size: cover; */
 }
 
 /* certficate */
@@ -154,9 +154,9 @@ input#image {
 svg {
     fill: currentColor;
     height: auto;
-    max-width: 70vmin;
+    /* max-width: 70vmin; */
     transform-origin: center;
-    width: 8%;
+    width: 6%;
     position: absolute;
     bottom: 150px;
     right: 100px;
@@ -178,10 +178,13 @@ svg {
     border: 4px solid #0C5280;
     padding: 15px 0;
     position: relative;
-    background-color: white;
-    z-index: -2;
+    /* background-color: white;
+    z-index: -2; */
 }
 
+.conduct-certificate{
+    padding: 30px 0;
+}
 .certificate:after {
     content: '';
     top: 0px;
@@ -314,7 +317,6 @@ img.logo {
     width: 100%;
     text-align: center;
 }
-
 
 
 
