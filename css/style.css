@@ -313,7 +313,7 @@ img.logo {
 .card-container {
     display: flex;
     justify-content: space-evenly;
-    margin: 15% 0;
+    margin-top: 13%;
     width: 100%;
     text-align: center;
 }
